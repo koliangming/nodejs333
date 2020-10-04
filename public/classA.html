@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<h1>ClassA</h1>
+
+<body>
+    <div class="content">
+        <form id="add-students-form">
+            <input type="text" name="name" placeholder="輸入 Student's name">
+            <input type="text" name="age" placeholder="輸入 Student's age">
+            <input type="text" name="gender" placeholder="輸入 Student's gender">
+            <button> Add a student </button>
+        </form>
+        <table id="stu-table" cellpadding="10" border="1" width="100%">
+            <tr>
+                <td>姓名</td>
+                <td>年齡</td>
+                <td>性別</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyCFB4-EFZPn0PdK2ipXC3WH_dVDtdzGhxc",
+        authDomain: "nodejs333.firebaseapp.com",
+        databaseURL: "https://nodejs333.firebaseio.com",
+        projectId: "nodejs333",
+        storageBucket: "nodejs333.appspot.com",
+        messagingSenderId: "910880463633",
+        appId: "1:910880463633:web:a4c593ad1726b8293a8ab0",
+        measurementId: "G-0N372DRYZH"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    // const db = firebase.firestore();
+</script>
+<script src="app.js"></script>
+
+</html>
