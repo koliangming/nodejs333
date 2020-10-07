@@ -33,6 +33,12 @@ td {
     position: relative;
     border-bottom: 1px solid #e6e6e6;
     height: 46px;
+    width: 300px;
+    text-align: center;
+}
+
+th {
+    font-size: 20px
 }
 
 table {
@@ -47,7 +53,7 @@ form input {
     border: 0;
     border-bottom: 1px solid rgb(221, 132, 132);
     margin: 0 1%;
-    padding: 10px;
+    padding: 5px;
     display: block;
     box-sizing: border-box;
     font-size: 18px;
@@ -56,7 +62,7 @@ form input {
 form input:focus {
     outline: none;
     border-bottom: 3px solid #88236f;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
     transition: all ease 0.2s;
 }
 
@@ -66,15 +72,74 @@ form:after {
     display: block;
 }
 
-button {
+.btn1 {
+    margin-bottom: 2px;
     border: 0;
     background: rgb(236, 221, 221);
     border-radius: 10px;
     padding: 13px;
     width: 10%;
-    box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1); */
     font-weight: bold;
     font-family: ubuntu;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     color: #999;
+    BORDER-RIGHT: #711200 1px solid;
+    PADDING-RIGHT: 8px;
+    BORDER-TOP: white 1px solid;
+    PADDING-LEFT: 8px;
+    FONT-SIZE: 12pt;
+    PADDING-BOTTOM: 8px;
+    BORDER-LEFT: white 1px solid;
+    PADDING-TOP: 8px;
+    BORDER-BOTTOM: #711200 1px solid;
+    FONT-FAMILY: Tahoma;
+}
+
+.btn2 {
+    margin-bottom: 2px;
+    border: 0;
+    background: rgb(251, 252, 199);
+    border-radius: 10px;
+    padding: 13px;
+    width: 10%;
+    /* box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1); */
+    font-weight: bold;
+    font-family: ubuntu;
+    /* letter-spacing: 1px; */
+    color: rgb(182, 75, 75);
+    BORDER-RIGHT: #711200 1px solid;
+    PADDING-RIGHT: 8px;
+    BORDER-TOP: white 1px solid;
+    PADDING-LEFT: 8px;
+    FONT-SIZE: 12pt;
+    PADDING-BOTTOM: 8px;
+    BORDER-LEFT: white 1px solid;
+    PADDING-TOP: 8px;
+    BORDER-BOTTOM: #711200 1px solid;
+    FONT-FAMILY: Tahoma;
+}
+
+.btn3 {
+    margin-bottom: 2px;
+    border: 0;
+    background: rgb(251, 252, 199);
+    border-radius: 10px;
+    padding: 13px;
+    width: 10%;
+    /* box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1); */
+    font-weight: bold;
+    font-family: ubuntu;
+    /* letter-spacing: 1px; */
+    color: rgb(182, 75, 75);
+    BORDER-LEFT: #711200 1px solid;
+    PADDING-RIGHT: 8px;
+    BORDER-BOTTOM: white 1px solid;
+    PADDING-LEFT: 8px;
+    FONT-SIZE: 12pt;
+    PADDING-BOTTOM: 8px;
+    BORDER-RIGHT: white 1px solid;
+    PADDING-TOP: 8px;
+    BORDER-TOP: #711200 1px solid;
+    FONT-FAMILY: Tahoma;
 }
