@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
 // define the about route
 router.get('/about', function (req, res) {
   res.send(
-    '<h1> About Galaxy </h1>' +
+    '<h1> About Jupiter </h1>' +
     '\n <img src="https://www.natgeomedia.com/userfiles/sm/sm804_images_A1/9136/2019081242812053.jpg" height="60%">'
   );
 });

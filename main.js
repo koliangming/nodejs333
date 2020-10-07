@@ -6,7 +6,7 @@ let user_router = require('./routers/main_router.js')
 app.get("/", (req, res) => {
     // res.send("This is main page.");
     res.send(
-        '<h1> About Galaxy </h1>' +
+        '<h1> About the Sky </h1>' +
         '\n <img src="https://www.natgeomedia.com/userfiles/sm/sm804_images_A1/9136/2019081242812053.jpg" height="60%">'
     );
 })
