@@ -10,7 +10,8 @@ router.use(function timeLog(req, res, next) {
 
 router.get('/', function (req, res) {
   res.send('<h1> Saturn(土星) </h1>' + '<br>' +
-    '<a href="/stars/Saturn/about"> about Saturn</a>'
+    '<a href="/stars/Saturn/about"> about Saturn</a>' + '<br>' +
+    '<img src="https://i.ntdtv.com/assets/uploads/2019/10/1-155-800x450.jpg" height="60%">'
   );
 });
 
