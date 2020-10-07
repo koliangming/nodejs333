@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
   res.send(
     '<h1> Galaxy(銀河系) </h1>' +
     '<h2><a href="/stars/Galaxy/about"> Detail(關於銀河系的詳細介紹) </a></h2>' +
-    '<h2><a href="/stars/Galaxy/classA.html"> Stars Discovery(探索你發現的星體) </a></h2>' +
+    '<h2><a href="/stars/Galaxy/classA.html"> Stars Discovery(探索星空的星體) </a></h2>' +
     '<img src="https://www.natgeomedia.com/userfiles/sm/sm804_images_A1/9136/2019081242812053.jpg" height="60%">'
   );
 });
