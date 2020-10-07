@@ -9,13 +9,15 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 
 router.get('/', function (req, res) {
-  res.send('Saturn\'s home page');
+  res.send('Saturn\'s home page' + '<br>' +
+    '<a href="/stars/Saturn/about"> about Saturn</a>'
+  );
 });
 
 // define the about route
 router.get('/about', function (req, res) {
   res.send(
-    '<h1> About Saturn </h1>' +
+    '<h1> Saturn(土星) </h1>' +
     '\n <img src="https://images.radio.com/wwjaam/Saturn.jpg?width=775&height=425&crop=4961,2728,x0,y283" height="60%">'
   );
 });
