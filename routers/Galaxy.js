@@ -12,8 +12,8 @@ router.use(function timeLog(req, res, next) {
 router.get('/', function (req, res) {
   res.send(
     'Galaxy\'s home page' + '<br>' +
-    '<a href="/user/Galaxy/about"> about </a>' + '<br>' +
-    '<a href="/user/Galaxy/classA.html"> classA </a>'
+    '<a href="/stars/Galaxy/about"> about </a>' + '<br>' +
+    '<a href="/stars/Galaxy/classA.html"> classA </a>'
   );
 });
 
