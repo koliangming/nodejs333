@@ -17,16 +17,18 @@ function renderStudents(doc) {
     // delete 
     let cross = document.createElement('img');
     cross.setAttribute('src', "cross.png");
-    // cross.setAttribute('align', "right");
     tr.appendChild(cross);
     cross.addEventListener('click', (test) => {
         test.stopPropagation();
-        let id = test.target.parentElement.getAttribute('data-id');
-        console.log(id);
-        db.collection('Stars').doc(id).delete();
+        if (confirm("確實要刪除嗎?")) {
+            let id = test.target.parentElement.getAttribute('data-id');
+            console.log(id);
+            db.collection('Stars').doc(id).delete();
+            // setTimeout(window.location.reload(), 1000);
+            alert("已刪除！請重新整理。");
+        }
     });
     //
-
     studentsTable.appendChild(tr);
 }
 
@@ -49,6 +51,7 @@ form.addEventListener('submit', (e) => {
     form.name.value = '';
     form.magnitude.value = '';
     form.type.value = '';
+    alert('資料已更新，請重新整理。');
 });
 
 //
