@@ -8,13 +8,16 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   res.send('Bob\'s home page');
 });
 
 // define the about route
-router.get('/about', function(req, res) {
-  res.send('About Bob');
+router.get('/about', function (req, res) {
+  res.send(
+    '<h1> About Galaxy </h1>' +
+    '\n <img src="https://images.radio.com/wwjaam/Saturn.jpg?width=775&height=425&crop=4961,2728,x0,y283" height="60%">'
+  );
 });
 
 module.exports = router;

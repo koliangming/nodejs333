@@ -1,8 +1,8 @@
 let express = require('express');
 let router = express.Router();
-let Fisheep = require('./Fisheep.js');
-let Alice = require('./Alice.js');
-let Bob = require('./Bob.js');
+let Galaxy = require('./Galaxy.js');
+let Jupiter = require('./Jupiter.js');
+let Saturn = require('./Saturn.js');
 router.get('/', (req, res) => {
     let options = {
         root: __dirname,
@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
     }
     res.sendFile("index.html", options)
 })
-router.use('/Fisheep', Fisheep);
-router.use('/Alice', Alice);
-router.use('/Bob', Bob);
+router.use('/Galaxy', Galaxy);
+router.use('/Jupiter', Jupiter);
+router.use('/Saturn', Saturn);
 
 module.exports = router;
