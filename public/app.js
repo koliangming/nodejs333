@@ -43,15 +43,19 @@ db.collection('Stars').get().then(data => {
 // add data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('Stars').add({
-        name: form.name.value,
-        magnitude: form.magnitude.value,
-        type: form.type.value
-    });
-    form.name.value = '';
-    form.magnitude.value = '';
-    form.type.value = '';
-    alert('資料已更新，請重新整理。');
+    if(form.name.value == '' && form.magnitude.value == '' && form.type.value == ''){
+        alert('尚未填寫資料，不能新增。');
+    } else {
+        db.collection('Stars').add({
+            name: form.name.value,
+            magnitude: form.magnitude.value,
+            type: form.type.value
+        });
+        form.name.value = '';
+        form.magnitude.value = '';
+        form.type.value = '';
+        alert('資料已更新，請重新整理。');
+    }
 });
 
 //
