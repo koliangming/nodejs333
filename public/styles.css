@@ -23,6 +23,7 @@ h1 {
 tr {
   list-style-type: none;
   padding: 0;
+  color: rgb(235, 25, 200);
 }
 
 td {
@@ -73,6 +74,7 @@ form:after {
 }
 
 .btn1 {
+  outline: none;
   margin-bottom: 2px;
   border: 0;
   background: rgb(236, 221, 221);
@@ -97,6 +99,7 @@ form:after {
 }
 
 .btn2 {
+  outline: none;
   margin-bottom: 2px;
   border: 0;
   background: rgb(251, 252, 199);
@@ -121,6 +124,7 @@ form:after {
 }
 
 .btn3 {
+  outline: none;
   margin-bottom: 2px;
   border: 0;
   background: rgb(251, 252, 199);

@@ -6,6 +6,9 @@ function renderStudents(doc) {
     let td2 = document.createElement("td");
     let td3 = document.createElement("td");
     let tr = document.createElement("tr");
+    // td1.setAttribute('class', "");
+    // td2.setAttribute('class', "");
+    // td3.setAttribute('class', "");
     tr.setAttribute('data-id', doc.id);
     td1.textContent = doc.data().name;
     td2.textContent = doc.data().type;
