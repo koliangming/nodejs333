@@ -12,8 +12,8 @@ router.get('/', function (req, res) {
   res.send(
     '<body style="background-repeat: no-repeat; background-image: url(https://www.wangyetuku.com/d/file/2019/aa47052d8f3f500b540cc33e9742a23a.jpg);">'+
     '<h1 style="color: rgb(190, 251, 161)"> Galaxy(銀河系)，是我們太陽系的故鄉。 </h1>' +
-    '<h2><a style="color: rgb(244, 250, 154)" href="/stars/Galaxy/about"> Detail(關於銀河系的詳細介紹)</a></h2>' +
-    '<h2><a style="color: rgb(244, 250, 154)" href="/stars/Galaxy/classA.html"> Stars Discovery(探索星空中的天體) </a></h2></body>' 
+    '<h2><a style="color: rgb(244, 250, 154)" href="/stars/Galaxy/about"> Detail (關於銀河系的詳細介紹)</a></h2>' +
+    '<h2><a style="color: rgb(244, 250, 154)" href="/stars/Galaxy/classA.html"> Stars Discovery (探索星空中的天體) </a></h2></body>' 
   );
 });
 
