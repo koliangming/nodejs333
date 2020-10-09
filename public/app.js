@@ -6,9 +6,6 @@ function renderStudents(doc) {
     let td2 = document.createElement("td");
     let td3 = document.createElement("td");
     let tr = document.createElement("tr");
-    // td1.setAttribute('class', "");
-    // td2.setAttribute('class', "");
-    // td3.setAttribute('class', "");
     tr.setAttribute('data-id', doc.id);
     td1.textContent = doc.data().name;
     td2.textContent = doc.data().type;
@@ -23,15 +20,14 @@ function renderStudents(doc) {
     tr.appendChild(cross);
     cross.addEventListener('click', (test) => {
         test.stopPropagation();
-        if (confirm("確實要刪除嗎?")) {
-            let id = test.target.parentElement.getAttribute('data-id');
-            console.log(id);
+        let id = test.target.parentElement.getAttribute('data-id');
+        // console.log(id);  
+        if (confirm('確定要刪除"'+td1.textContent+'"嗎?')) {
             db.collection('Stars').doc(id).delete();
-            // setTimeout(window.location.reload(), 1000);
             alert("已刪除！請重新整理。");
+            // setTimeout(window.location.reload(), 1000);
         }
     });
-    //
     studentsTable.appendChild(tr);
 }
 
@@ -41,13 +37,12 @@ db.collection('Stars').get().then(data => {
         renderStudents(doc);
     });
 });
-// 
 
 // add data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if(form.name.value == '' && form.magnitude.value == '' && form.type.value == ''){
-        alert('尚未填寫資料，不能新增。');
+    if(form.name.value == ''){
+        alert('尚未填寫天體名稱，不能新增。');
     } else {
         db.collection('Stars').add({
             name: form.name.value,
@@ -61,11 +56,8 @@ form.addEventListener('submit', (e) => {
     }
 });
 
-//
+//button decoration
 $(function () {
-    // $(window).on('dragenter', function () {
-    //     $(this).preventDefault();
-    // });
     $("#btn").on("mouseover", function () {
         $(this).addClass('btn2');
         $(this).removeClass('btn1');
