@@ -10,7 +10,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/', function (req, res) {
   res.send(
-    '<body style="background-repeat: no-repeat; background-image: url(http://wallpapers4screen.com/Uploads/19-1-2016/3370/the-universe-saturn-planet-space-stars.jpg);">'+
+    '<body style="background-repeat: no-repeat; background-image: url(https://github.com/koliangming/nodejs333/blob/master/public/the-universe-saturn-planet-space-stars.jpg);">'+
     '<h1 style="color: rgb(190, 251, 161)"> Saturn(土星)，是太陽系中最多衛星的行星。 </h1>' +
     '<h2><a style="color: rgb(244, 250, 154)" href="/stars/Saturn/about"> Detail(關於土星的詳細介紹)</a></h2></body>' 
   );
