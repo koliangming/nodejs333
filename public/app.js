@@ -20,12 +20,11 @@ function renderStudents(doc) {
     tr.appendChild(cross);
     cross.addEventListener('click', (test) => {
         test.stopPropagation();
-        let id = test.target.parentElement.getAttribute('data-id');
-        // console.log(id);  
-        if (confirm('確定要刪除"'+td1.textContent+'"嗎?')) {
-            db.collection('Stars').doc(id).delete();
-            alert("已刪除！請重新整理。");
-            // setTimeout(window.location.reload(), 1000);
+        if ( confirm('確定要刪除"'+td1.textContent+'"嗎?') ) {
+            let id = test.target.parentElement.getAttribute('data-id');
+            db.collection('Stars').doc(id).delete().then( () => {
+                window.location.reload();
+            });
         }
     });
     studentsTable.appendChild(tr);
@@ -42,21 +41,23 @@ db.collection('Stars').get().then(data => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     if(form.name.value == ''){
-        alert('尚未填寫天體名稱，不能新增。');
+        alert('尚未填寫天體名，不能新增。');
     } else {
         db.collection('Stars').add({
             name: form.name.value,
             magnitude: form.magnitude.value,
             type: form.type.value
+        }).then( () => {
+            form.name.value = '';
+            form.magnitude.value = '';
+            form.type.value = '';
+            // alert('資料已更新!');
+            window.location.reload();
         });
-        form.name.value = '';
-        form.magnitude.value = '';
-        form.type.value = '';
-        alert('資料已更新，請重新整理。');
     }
 });
 
-//button decoration
+//submit button decoration
 $(function () {
     $("#btn").on("mouseover", function () {
         $(this).addClass('btn2');
