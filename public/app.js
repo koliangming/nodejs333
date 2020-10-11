@@ -32,13 +32,15 @@ function renderStudents(doc) {
     });
     cross.addEventListener('click', (test) => {
         // test.stopPropagation();
+        // test.target.setAttribute('src', 'cross_big_pressed.png');
         if ( confirm('確定要刪除"'+td1.textContent+'"嗎?') ) {
                 let id = test.target.parentElement.getAttribute('data-id');
                 db.collection('Stars').doc(id).delete().then( () => {
                     window.location.reload();
                 });
             }
-    });
+        // test.target.setAttribute('src', 'cross_big.png');
+        });
     studentsTable.appendChild(tr);
 }
 
