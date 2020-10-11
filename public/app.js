@@ -14,18 +14,30 @@ function renderStudents(doc) {
     tr.appendChild(td2);
     tr.appendChild(td3);
 
-    // delete 
+    // delete and button decoration
     let cross = document.createElement('img');
-    cross.setAttribute('src', "cross.png");
+    cross.setAttribute('src', 'cross.png');
     tr.appendChild(cross);
+    cross.addEventListener('mouseover', (test) => {
+        test.target.setAttribute('src', 'cross_big.png');
+    });
+    cross.addEventListener('mouseleave', (test) => {
+        test.target.setAttribute('src', 'cross.png');
+    });
+    cross.addEventListener('mousedown', (test) => {
+        test.target.setAttribute('src', 'cross_big_pressed.png');
+    });
+    cross.addEventListener('mouseup', (test) => {
+        test.target.setAttribute('src', 'cross_big.png');
+    });
     cross.addEventListener('click', (test) => {
-        test.stopPropagation();
+        // test.stopPropagation();
         if ( confirm('確定要刪除"'+td1.textContent+'"嗎?') ) {
-            let id = test.target.parentElement.getAttribute('data-id');
-            db.collection('Stars').doc(id).delete().then( () => {
-                window.location.reload();
-            });
-        }
+                let id = test.target.parentElement.getAttribute('data-id');
+                db.collection('Stars').doc(id).delete().then( () => {
+                    window.location.reload();
+                });
+            }
     });
     studentsTable.appendChild(tr);
 }
@@ -41,7 +53,7 @@ db.collection('Stars').get().then(data => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     if(form.name.value == ''){
-        alert('尚未填寫天體名，不能新增。');
+        alert('尚未填寫天體名稱，不能新增。');
     } else {
         db.collection('Stars').add({
             name: form.name.value,
@@ -51,7 +63,6 @@ form.addEventListener('submit', (e) => {
             form.name.value = '';
             form.magnitude.value = '';
             form.type.value = '';
-            // alert('資料已更新!');
             window.location.reload();
         });
     }
@@ -78,5 +89,13 @@ $(function () {
         $(this).addClass('btn2');
         $(this).removeClass('btn1');
         $(this).removeClass('btn3');
+    });
+
+    // cross decoration
+    $(".cross").on("mouseover", function () {
+        $(this).attr('src') = "cross_big.png";
+    });
+    $(".cross").on("mouseleave", function () {
+        $(this).attr('src') = "cross.png";
     });
 });

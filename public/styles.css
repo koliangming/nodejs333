@@ -7,7 +7,7 @@ h1 {
   color: #fff;
   font-size: 64px;
   letter-spacing: 2px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   text-align: center;
 }
 
@@ -16,7 +16,7 @@ h1 {
   max-width: 960px;
   margin: 30px auto;
   padding: 20px 30px;
-  border-radius: 10px 120px 10px 10px;
+  border-radius: 10px 120px 10px 80px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -34,7 +34,7 @@ td {
   position: relative;
   border-bottom: 1px solid #e6e6e6;
   height: 46px;
-  width: 300px;
+  width: 240px;
   text-align: center;
 }
 
@@ -45,6 +45,12 @@ th {
 table {
   border: 8px rgb(91, 116, 224) groove;
   border-radius: 25px;
+}
+.content {
+  display: block;
+  overflow: auto;
+  /* height: 50%; */
+  max-height: 50%;
 }
 
 form input {
