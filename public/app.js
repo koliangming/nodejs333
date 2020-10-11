@@ -90,12 +90,4 @@ $(function () {
         $(this).removeClass('btn1');
         $(this).removeClass('btn3');
     });
-
-    // cross decoration
-    $(".cross").on("mouseover", function () {
-        $(this).attr('src') = "cross_big.png";
-    });
-    $(".cross").on("mouseleave", function () {
-        $(this).attr('src') = "cross.png";
-    });
 });

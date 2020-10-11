@@ -26,7 +26,7 @@ router.get('/about', function (req, res) {
     '<h1 style="color: rgb(190, 251, 161)"> 大紅斑(Great Red Spot) </h1>' +
     '<div style="color: blue; width: 50%;">木星最著名的特徵是大紅斑，這是比地球大的一個持久性反氣旋風暴，位置在赤道南方22°，至少在1831年以來，就已經知道它的存在，並且可能更提早至1665年。來自哈伯太空望遠鏡的影像顯示多達兩個紅斑毗鄰著大紅斑。這個風暴大得可以使用地基的小口徑12cm或更大的望遠鏡看見。一些數學模型表明這個風暴是穩定的，可能是這顆行星上一個永久性的特徵。</div>' +
     '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/NASA14135-Jupiter-GreatRedSpot-Shrinks-20140515.jpg/450px-NASA14135-Jupiter-GreatRedSpot-Shrinks-20140515.jpg">' +
-    '<br><br><br><br><h3><a style="color: pink" href="/stars"> 回到星空頁(Back to the sky) </a></h3></body>'    
+    '<br><br><br><br><br><br><h3><a style="color: pink" href="/stars"> 回到星空頁(Back to the sky) </a></h3></body>'    
   );
 });
 
