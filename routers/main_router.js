@@ -1,6 +1,5 @@
 let express = require('express');
 let router = express.Router();
-// let Galaxy = require('../public/Galaxy.js');
 let Galaxy = require('./Galaxy.js');
 let Jupiter = require('./Jupiter.js');
 let Saturn = require('./Saturn.js');

@@ -1,12 +1,13 @@
 let express = require('express');
 let router = express.Router();
-router.use(express.static('./public2')); // 把 public2 中的檔案全部丟上來
-// middleware that is specific to this router
+router.use(express.static('./public2'));
 
+// middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
   next();
 });
+
 // define the home page route
 router.get('/', function (req, res) {
   res.send(
