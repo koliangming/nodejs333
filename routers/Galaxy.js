@@ -26,7 +26,7 @@ router.get('/about', function (req, res) {
     '<h1 style="color: rgb(190, 251, 161)"> 暗物質(Dark matter) </h1>' +
     '<div style="color: yellow; width: 50%;">人們透過重力產生的效應得知，銀河系中有大量暗物質的存在。現代天文學經由重力透鏡、宇宙中大尺度結構的形成、微波背景輻射等方法和理論來探測暗物質。在很大距離範圍內的恆星和氣體都以每秒大約220公里的速度在軌道上繞著銀河中心運行。這種恆定的速度違反了克卜勒動力學，因而認為銀河系中有大量不會輻射或吸收電磁輻射的質量。這些質量被稱為暗物質。</div>' +
     '<br><br><img src="https://9.blog.xuite.net/9/3/d/e/235385341/blog_4387782/txt/318775605/8.jpg" width="40%">'+
-    '<br><br><br><br><br><br><br><h3><a style="color: pink" href="/stars"> 回到星空頁(Back to the sky) </a></h3></body>'    
+    '<br><br><br><br><br><br><h3><a style="color: pink" href="/stars"> 回到星空頁(Back to the sky) </a></h3></body>'    
   );
 });
 
