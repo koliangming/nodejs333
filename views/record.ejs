@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>record.EJS</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src='app.js'></script>
+    </head>
+    <body style="background-repeat: no-repeat; background-image: url(the-universe-saturn-planet-space-stars.jpg);">
+        <h1 style="color:rgb(190, 251, 161)" >眺望星空，看看還有什麼</h1>
+        <div class="content">
+            <form id="add-students-form" action="http://127.0.0.1:8888/Galaxy/record" method="GET">
+                <input id="input" type="text" name="name" placeholder="輸入名稱，譬如:太陽">
+                <select name="type">
+                    <option value="" selected disabled>輸入種類，譬如:恆星</option>
+                    <option value="衛星(satellite)">衛星(satellite)</option>
+                    <option value="行星(planet)">行星(planet)</option>
+                    <option value="慧星(comet)">慧星(comet)</option>
+                    <option value="恆星(star)">恆星(star)</option>
+                    <option value="星團(cluster)">星團(cluster)</option>
+                    <option value="星系(galaxy)">星系(galaxy)</option>
+                    <option value="超星系團(supercluster)">超星系團(supercluster)</option>
+                </select> 
+                <input type="text" name="magnitude" placeholder="輸入亮度，譬如:-26">
+                <button type="button" id="btn" class="btn1" border="0"> 加入天體 </button>
+            </form>
+            <table id="stu-table" cellpadding="10" border="1" width="100%"><tbody>
+                <tr>
+                    <th>天體</th>
+                    <th>種類</th>
+                    <th>視星等</th>
+                </tr></tbody>
+                <% for(let i=0; i<star.length; i++) { %>
+                    <tr data-id= <%= star[i].id %> >
+                        <td class='starName' name=<%= star[i].name %> width='240px' style='text-align: center;'> <%= star[i].name %> </td>    
+                        <td width='240px' style='text-align: center;'> <%= star[i].type %> </td>    
+                        <td width='240px' style='text-align: center;'> <%= star[i].magnitude %> </td>
+                        <td style='background-color: white; border-width: 0px;' align='left'> <img src='cross.png'> </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+        <h3><a style="color: pink" href="/stars"> 回到星空頁(Back to the sky) </a></h3>
+
+    </body>
+</html>
