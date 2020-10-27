@@ -26,18 +26,18 @@
                 <input type="text" name="magnitude" placeholder="輸入亮度，譬如:-26">
                 <button type="button" id="btn" class="btn1" border="0"> 加入天體 </button>
             </form>
-            <table id="stu-table" cellpadding="10" border="1" width="100%"><tbody>
+            <table id="stu-table" cellpadding="10" border="1" width="100%">
                 <tr>
                     <th>天體</th>
                     <th>種類</th>
                     <th>視星等</th>
-                </tr></tbody>
+                </tr>
                 <% for(let i=0; i<star.length; i++) { %>
                     <tr data-id= <%= star[i].id %> >
-                        <td class='starName' name=<%= star[i].name %> width='240px' style='text-align: center;'> <%= star[i].name %> </td>    
-                        <td width='240px' style='text-align: center;'> <%= star[i].type %> </td>    
-                        <td width='240px' style='text-align: center;'> <%= star[i].magnitude %> </td>
-                        <td style='background-color: white; border-width: 0px;' align='left'> <img src='cross.png'> </td>
+                        <td class='starName' style='text-align: center;' name=<%= star[i].name %> > <%= star[i].name %> </td>    
+                        <td style='text-align: center;'> <%= star[i].type %> </td>    
+                        <td style='text-align: center;'> <%= star[i].magnitude %> </td>
+                        <td style='width: 90px; padding: 0px; background-color: white; border-width: 0px;' align='left'> <img src='cross.png'> </td>
                     </tr>
                 <% } %>
             </table>
