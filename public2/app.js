@@ -33,12 +33,12 @@ function renderStudents(doc) {
     cross.addEventListener('click', (test) => {
         test.stopPropagation();
         if ( confirm('確定要刪除"'+td1.textContent+'"嗎?') ) {
-                let id = test.target.parentElement.getAttribute('data-id');
-                db.collection('Stars').doc(id).delete().then( () => {
-                    window.location.reload();
-                });
-            }
-        });
+            let id = test.target.parentElement.getAttribute('data-id');
+            db.collection('Stars').doc(id).delete().then( () => {
+                window.location.reload();
+            });
+        }
+    });
     studentsTable.appendChild(tr);
 }
 
